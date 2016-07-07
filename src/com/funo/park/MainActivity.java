@@ -138,7 +138,7 @@ public class MainActivity extends Activity
 		implements OnMapClickListener, OnClickListener, SensorEventListener, OnMapLongClickListener {
 
 	private static String TAG = MainActivity.class.getSimpleName();
-	
+
 	private final int ROUTE_TYPE_DRIVE = 0;
 	private final int ROUTE_TYPE_BUS = 1;
 	private final int ROUTE_TYPE_WALK = 2;
@@ -243,7 +243,6 @@ public class MainActivity extends Activity
 	private String searchStr;
 	private ArrayList<LocationInfo> itemLocationList = new ArrayList<LocationInfo>();
 	List<PoiItem> poi = new ArrayList<PoiItem>();
-	com.funo.park.util.MyPoiOverlay poiOverlay;
 	InputMethodManager imm;
 
 	private List<ParkListReturnData> list;
@@ -935,14 +934,12 @@ public class MainActivity extends Activity
 					soapSerializationEnvelope.bodyOut = soapObject;
 					soapSerializationEnvelope.dotNet = true;
 					soapSerializationEnvelope.setOutputSoapObject(soapObject);
-					HttpTransportSE localHttpTransportSE = new HttpTransportSE(
-							"http://api.park.gl.gov.cn/Android/ParkInfo.asmx?WSDL");
+					HttpTransportSE localHttpTransportSE = new HttpTransportSE("http://api.park.gl.gov.cn/Android/ParkInfo.asmx?WSDL");
 					localHttpTransportSE.call(null, soapSerializationEnvelope);
 					String str1 = soapSerializationEnvelope.getResponse().toString();
 					String str2 = "{\"list\":" + str1 + "}";
 					Gson gson = new Gson();
-					ParkListReturnInfo parkListReturnInfo = (ParkListReturnInfo) gson.fromJson(str2,
-							ParkListReturnInfo.class);
+					ParkListReturnInfo parkListReturnInfo = (ParkListReturnInfo) gson.fromJson(str2, ParkListReturnInfo.class);
 					if (parkListReturnInfo != null) {
 						Message msg = new Message();
 						msg.what = PARK_LIST_GET_SUCCESS;
@@ -1169,8 +1166,7 @@ public class MainActivity extends Activity
 							myPoiOverlay.addMarker(map, AMapServicesUtil.convertToLatLng(geoPoint), info.getTitle());
 						}
 
-						aMap.moveCamera(
-								CameraUpdateFactory.newLatLngZoom(AMapServicesUtil.convertToLatLng(mGeoPoint), 14));
+						aMap.moveCamera(CameraUpdateFactory.newLatLngZoom(AMapServicesUtil.convertToLatLng(mGeoPoint), 14));
 
 						fast_list_rl.setVisibility(View.VISIBLE);
 						mMapView.setVisibility(View.GONE);
@@ -1474,6 +1470,7 @@ public class MainActivity extends Activity
 					naviOverlay.setStartStr(BaseConstant.changeLength(addressInfo.getAddress(), 8));
 				} else if (msg.what == MSG_VIEW_GET_POI_ADDRESSNAME) {
 					hideProgressDialog();
+					
 					AddressInfo addressInfo = (AddressInfo) msg.obj;
 					myPoiOverlay.addMarker(null, AMapServicesUtil.convertToLatLng(addressInfo.getGeoPoint()), null);
 					myPoiOverlay.setStartStr(BaseConstant.changeLength(addressInfo.getAddress(), 8));
@@ -1483,10 +1480,11 @@ public class MainActivity extends Activity
 						return;
 					showProgressDialog("", "获取地址信息中...");
 					geocoderService.getLocationName(longPressPoint, new GetLoationNameCallback() {
-						
+
 						@Override
 						public void doSuccessCallback(String address) {
 							hideProgressDialog();
+							
 							AddressInfo addressInfo = new AddressInfo();
 							addressInfo.setAddress(address);
 							addressInfo.setGeoPoint(longPressPoint);
@@ -1495,12 +1493,12 @@ public class MainActivity extends Activity
 							msg.obj = addressInfo;
 							handler.sendMessage(msg);
 						}
-						
+
 						@Override
 						public void doFailCallback(String msg) {
-							
+
 						}
-						
+
 					});
 				} else if (msg.what == MSG_VIEW_ADDRESSNAME) {
 					hideProgressDialog();
@@ -1557,6 +1555,7 @@ public class MainActivity extends Activity
 					});
 				} else if (msg.what == FIRST_LOCATION) {
 					hideProgressDialog();
+					
 					BaseConstant.geoPoint = mGeoPoint;
 					// aMap.animateCamera(CameraUpdateFactory.changeLatLng(AMapServicesUtil.convertToLatLng(mGeoPoint)));
 					if (msg.arg1 == 0) {
@@ -1602,6 +1601,9 @@ public class MainActivity extends Activity
 					searchLL.setVisibility(View.GONE);
 				} else if (msg.what == BaseConstant.POISEARCH) {
 					hideProgressDialog();
+					if (msg.arg1 == 1) {
+						searchLL.setVisibility(View.GONE);
+					}
 					itemLocationList.add((LocationInfo) msg.obj);
 					((RoadListAdapter) listView.getAdapter()).notifyDataSetChanged();
 				} else if (msg.what == BaseConstant.POI_OTHER_SEARCH) {
@@ -2131,33 +2133,31 @@ public class MainActivity extends Activity
 
 					@Override
 					public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
-						LocationInfo locationInfo = (LocationInfo) ((RoadListAdapter) listView.getAdapter())
-								.getItem(arg2);
+						LocationInfo locationInfo = ((RoadListAdapter) listView.getAdapter()).getItem(arg2);
 						try {
-							if (poi != null || poi.size() > 0) {
+							if (poi != null && poi.size() > 0) {
 								changeLl.setVisibility(View.GONE);
 								fast_list_rl.setVisibility(View.GONE);
 								mMapView.setVisibility(View.VISIBLE);
 								weatherIv.setVisibility(View.VISIBLE);
 								listBtn.setVisibility(View.VISIBLE);
-								if (poiOverlay != null) {
-									poiOverlay.removeFromMap();
-								}
+								
+								clearMap();
+								initPark();
 
 								Message msg = new Message();
 								msg.what = MSG_VIEW_CLEAR;
 								handler.sendMessage(msg);
-								Drawable drawable = getResources().getDrawable(R.drawable.icon_search);
-								poiOverlay = new com.funo.park.util.MyPoiOverlay(MainActivity.this, drawable, aMap,
-										locationInfo.getPoiItem(), locationInfo, width, height); // 将结果的第一页添加到PoiOverlay
-								poiOverlay.removeFromMap();
-								poiOverlay.addToMap(); // 将poiOverlay标注在地图上
-								poiOverlay.zoomToSpan();
-								mMapView.invalidate();
+								
+								BaseConstant.geoPoint = locationInfo.getGeoPoint();
+								showProgressDialog("", "停车场查询中，请稍后...");
+								getParkData(0);
+								
+								LatLng position = AMapServicesUtil.convertToLatLng(locationInfo.getGeoPoint());
+								parkOverlay.addMarker(null, position, R.drawable.icon_search, locationInfo.getTitle());
+								aMap.animateCamera(CameraUpdateFactory.changeLatLng(position));
+								
 								searchPw.dismiss();
-								aMap.animateCamera(CameraUpdateFactory
-										.changeLatLng(AMapServicesUtil.convertToLatLng(locationInfo.getGeoPoint())));
-								mMapView.invalidate();
 							}
 						} catch (Exception e) {
 							e.printStackTrace();
@@ -2177,7 +2177,7 @@ public class MainActivity extends Activity
 						} else {
 							itemLocationList.clear();
 							searchLL.setVisibility(View.VISIBLE);
-							Thread t = new Thread(new Runnable() {
+							new Thread(new Runnable() {
 
 								@Override
 								public void run() {
@@ -2220,16 +2220,21 @@ public class MainActivity extends Activity
 												locationInfo.setAddress(addressLocName);
 												locationInfo.setGeoPoint(geoPoint);
 												locationInfo.setNumber(j);
-												locationInfo.setPoiItem(poiItems);//
+												locationInfo.setPoiItem(poiItems);
 												Message message = new Message();
 												message.obj = locationInfo;
 												message.what = BaseConstant.POISEARCH;
-												handler.sendMessage(message);
-												if (listView.getCount() >= 1) {
-													Message searchMsg = new Message();
-													searchMsg.what = BaseConstant.SEARCH;
-													handler.sendMessage(searchMsg);
+												if (j == size - 1) {
+													message.arg1 = 1;
+												} else {
+													message.arg1 = 0;
 												}
+												handler.sendMessage(message);
+											}
+											if (listView.getCount() >= 1) {
+												Message searchMsg = new Message();
+												searchMsg.what = BaseConstant.SEARCH;
+												handler.sendMessage(searchMsg);
 											}
 										}
 									} else {
@@ -2239,8 +2244,7 @@ public class MainActivity extends Activity
 									}
 								}
 
-							});
-							t.start();
+							}).start();
 						}
 					}
 
@@ -2299,6 +2303,11 @@ public class MainActivity extends Activity
 										Message message = new Message();
 										message.obj = locationInfo;
 										message.what = BaseConstant.POISEARCH;
+										if (j == size - 1) {
+											message.arg1 = 1;
+										} else {
+											message.arg1 = 0;
+										}
 										handler.sendMessage(message);
 										if (listView.getCount() >= 1) {
 											Message searchMsg = new Message();
@@ -2615,7 +2624,7 @@ public class MainActivity extends Activity
 	 * 语音是否识别成功
 	 */
 	boolean hideVoiceImg = true;
-	
+
 	private void voiceData() {
 		// 移动数据分析，收集开始听写事件
 		FlowerCollector.onEvent(MainActivity.this, "iat_recognize");
@@ -2628,21 +2637,21 @@ public class MainActivity extends Activity
 					CrashReport.postCatchedException(new RuntimeException("初始化失败，错误码：" + code));
 				}
 			}
-			
+
 		};
 		// 初始化听写Dialog，如果只使用有UI听写功能，无需创建SpeechRecognizer
 		// 使用UI听写功能，请根据sdk文件目录下的notice.txt,放置布局文件和图片资源
 		final RecognizerDialog mIatDialog = new RecognizerDialog(MainActivity.this, mInitListener);
 		mIatDialog.setOnCancelListener(new OnCancelListener() {
-			
+
 			@Override
 			public void onCancel(DialogInterface dialog) {
 				voiceIndex.setVisibility(View.GONE);
 			}
-			
+
 		});
 		mIatDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
-			
+
 			@Override
 			public void onDismiss(DialogInterface dialog) {
 				if (hideVoiceImg) {
@@ -2650,12 +2659,12 @@ public class MainActivity extends Activity
 				}
 				hideVoiceImg = true;
 			}
-			
+
 		});
 		RecognizerDialogListener mRecognizerDialogListener = new RecognizerDialogListener() {
-			
+
 			StringBuilder sb = new StringBuilder();
-			
+
 			@Override
 			public void onResult(RecognizerResult results, boolean isLast) {
 				String text = JsonParser.parseIatResult(results.getResultString());
@@ -2663,30 +2672,30 @@ public class MainActivity extends Activity
 				if (isLast) {
 					if (!TextUtils.isEmpty(sb) && sb.indexOf("停车") != -1) {
 						hideVoiceImg = true;
-						
+
 						index = 0;
 						nearTv.setText("周边停车场");
-						
+
 						Message msg = new Message();
 						msg.what = MSG_VIEW_CLEAR;
 						handler.sendMessage(msg);
-						
+
 						showProgressDialog("", "正在定位中，请稍后！");
 						myLocationSource.requestLocation(new LocationCallback() {
-							
+
 							@Override
 							public void syncLocation(AMapLocation amapLocation) {
 								mGeoPoint = new LatLonPoint(amapLocation.getLatitude(), amapLocation.getLongitude());
 								PublicVar.loationPoint = mGeoPoint;
 								PublicVar.currentLocationName = amapLocation.getPoiName();
 							}
-							
+
 							@Override
 							public void doCallback(AMapLocation amapLocation) {
 								aMap.moveCamera(CameraUpdateFactory.newLatLngZoom(
 										new LatLng(amapLocation.getLatitude(), amapLocation.getLongitude()), 14));
 								new Thread(new Runnable() {
-									
+
 									@Override
 									public void run() {
 										Message msg = new Message();
@@ -2694,10 +2703,10 @@ public class MainActivity extends Activity
 										msg.arg1 = 1;
 										handler.sendMessage(msg);
 									}
-									
+
 								}).start();
 							}
-							
+
 						});
 					} else {
 						sb = new StringBuilder();
@@ -2771,7 +2780,7 @@ public class MainActivity extends Activity
 		// 开放统计 移动数据统计分析
 		FlowerCollector.onPageEnd(TAG);
 		FlowerCollector.onPause(MainActivity.this);
-		
+
 		super.onPause();
 
 		mMapView.onPause();
@@ -2787,7 +2796,7 @@ public class MainActivity extends Activity
 		// 开放统计 移动数据统计分析
 		FlowerCollector.onResume(MainActivity.this);
 		FlowerCollector.onPageStart(TAG);
-		
+
 		super.onResume();
 
 		mMapView.onResume();

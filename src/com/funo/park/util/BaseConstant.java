@@ -123,7 +123,8 @@ public class BaseConstant {
 			// BaseConstant.homePage = homePageStr;
 			BaseConstant.homePage = "一键停车";
 		}
-		// System.out.println(BaseConstant.distance + "----" + BaseConstant.homePage);
+		// System.out.println(BaseConstant.distance + "----" +
+		// BaseConstant.homePage);
 	}
 
 }

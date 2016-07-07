@@ -32,7 +32,7 @@ public class RoadListAdapter extends BaseAdapter {
 	}
 
 	@Override
-	public Object getItem(int position) {
+	public LocationInfo getItem(int position) {
 		return itemList.get(position);
 
 	}

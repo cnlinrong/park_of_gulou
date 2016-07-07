@@ -160,6 +160,9 @@ public class MyItemizedOverlay implements Overlay, InfoWindowAdapter, OnMarkerCl
 
 	@Override
 	public View getInfoContents(Marker marker) {
+		if (selectedMarker.getObject() == null) {
+			return null;
+		}
 		if (!markers.contains(marker)) {
 			return null;
 		}
@@ -175,6 +178,9 @@ public class MyItemizedOverlay implements Overlay, InfoWindowAdapter, OnMarkerCl
 
 	@Override
 	public View getInfoWindow(Marker marker) {
+		if (selectedMarker.getObject() == null) {
+			return null;
+		}
 		if (!markers.contains(marker)) {
 			return null;
 		}

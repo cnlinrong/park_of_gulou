@@ -19,7 +19,7 @@ import com.funo.park.R;
 import com.funo.park.data.PublicVar;
 import com.funo.park.util.AMapServicesUtil;
 import com.funo.park.util.BaseConstant;
-
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Color;
 import android.text.Spannable;
@@ -34,11 +34,12 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+@SuppressLint("InflateParams")
 public class MyPoiOverlay implements Overlay, InfoWindowAdapter, OnMarkerClickListener {
 
 	public final static int NAV_MODE_CAR = 0;
 	public final static int NAV_MODE_CAR_AND_BUS = 1;
-	
+
 	private AMap mAMap;
 	private LatLonPoint mGeoPoint;
 	private List<Marker> markers = new ArrayList<Marker>();
@@ -61,7 +62,7 @@ public class MyPoiOverlay implements Overlay, InfoWindowAdapter, OnMarkerClickLi
 			selectedMarker.hideInfoWindow();
 		}
 	}
-	
+
 	public int getNavMode() {
 		return navMode;
 	}
@@ -187,6 +188,7 @@ public class MyPoiOverlay implements Overlay, InfoWindowAdapter, OnMarkerClickLi
 		return infoWindow;
 	}
 
+	@SuppressWarnings("unchecked")
 	public void render(Marker marker, View view) {
 		if (null != selectedMarker && navMode == 0) {
 			RelativeLayout rl = (RelativeLayout) view.findViewById(R.id.popLl);
@@ -215,18 +217,19 @@ public class MyPoiOverlay implements Overlay, InfoWindowAdapter, OnMarkerClickLi
 			TextView park_addressTv = (TextView) view.findViewById(R.id.park_address);
 			park_addressTv.setVisibility(View.GONE);
 			ImageButton naviIb = (ImageButton) view.findViewById(R.id.naviIb);
-//			naviIb.setVisibility(View.GONE);
+			// naviIb.setVisibility(View.GONE);
 			naviIb.setOnClickListener(new OnClickListener() {
 
 				@Override
 				public void onClick(View v) {
-//					ParkListReturnData prd = new ParkListReturnData();
-//					prd.setName(name);
-//					((MainActivity) (mContext)).popSearchRoute(selectedPoint, prd, null);
-					
+					// ParkListReturnData prd = new ParkListReturnData();
+					// prd.setName(name);
+					// ((MainActivity) (mContext)).popSearchRoute(selectedPoint,
+					// prd, null);
+
 					mContext.searchRouteResult(getStartPoint(), getEndPoint(), RouteSearch.DrivingDefault);
 					BaseConstant.routeInt = 0;
-					
+
 					selectedMarker.hideInfoWindow();
 				}
 
@@ -286,7 +289,7 @@ public class MyPoiOverlay implements Overlay, InfoWindowAdapter, OnMarkerClickLi
 						mContext.searchRouteResult(getEndPoint(), getStartPoint(), RouteSearch.DrivingDefault);
 					}
 					BaseConstant.routeInt = 0;
-					
+
 					selectedMarker.hideInfoWindow();
 				}
 
@@ -309,7 +312,7 @@ public class MyPoiOverlay implements Overlay, InfoWindowAdapter, OnMarkerClickLi
 						mContext.searchRouteResult(getEndPoint(), getStartPoint(), RouteSearch.BusDefault);
 					}
 					BaseConstant.routeInt = 1;
-					
+
 					selectedMarker.hideInfoWindow();
 				}
 
@@ -335,7 +338,7 @@ public class MyPoiOverlay implements Overlay, InfoWindowAdapter, OnMarkerClickLi
 		}
 		return selectedMarkerTitle;
 	}
-	
+
 	public boolean isInverted() {
 		if (count % 2 == 0) {
 			return false;
@@ -343,5 +346,5 @@ public class MyPoiOverlay implements Overlay, InfoWindowAdapter, OnMarkerClickLi
 			return true;
 		}
 	}
-	
+
 }
