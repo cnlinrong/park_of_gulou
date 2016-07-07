@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dip"
+    android:layout_height="200dip"
+    android:background="@drawable/boxbg" >
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/close" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:text="搜索位置："
+            android:textColor="@color/black2" />
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:background="@color/yellow"
+            android:padding="3dip"
+            android:text="当前位置："
+            android:textColor="#267e00" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:text="查找周边停车场"
+            android:textColor="@color/black2" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dip" >
+
+            <Button
+                android:id="@+id/ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ok_bg"
+                android:paddingBottom="3dip"
+                android:paddingLeft="15dip"
+                android:paddingRight="15dip"
+                android:paddingTop="3dip"
+                android:text="确定" />
+
+            <Button
+                android:id="@+id/exit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:background="@drawable/ok_bg"
+                android:paddingBottom="3dip"
+                android:paddingLeft="15dip"
+                android:paddingRight="15dip"
+                android:paddingTop="3dip"
+                android:text="取消" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

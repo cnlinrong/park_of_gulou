@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dip"
+    android:layout_height="200dip"
+    android:layout_gravity="center"
+    android:background="@drawable/wealthbox"
+    android:padding="5dip" >
+
+    <ImageView
+        android:id="@+id/weather_quit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/close" />
+
+    <LinearLayout
+        android:id="@+id/successLoad"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:padding="5dip" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="4" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="vertical"
+                android:padding="5dip" >
+
+                <TextView
+                    android:id="@+id/dateTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="周四 8月2日"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/temperatureTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dip"
+                    android:text="20°C ~ 30°C"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/weatherTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dip"
+                    android:text="大到暴雨转特"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/weatherIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/weather02" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical"
+                android:padding="5dip" >
+
+                <TextView
+                    android:id="@+id/area"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text="福州"
+                    android:textColor="@color/black"
+                    android:textSize="18dip" />
+
+                <TextView
+                    android:id="@+id/wash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dip"
+                    android:text="不宜洗车"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#35579d32"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingTop="5dip" >
+
+                    <ImageView
+                        android:id="@+id/tom_weatherIv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/weather02" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dip"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="明天"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tom_temperatureTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="24°C ~ 29°C"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingTop="5dip" >
+
+                    <ImageView
+                        android:id="@+id/tom_after_weather"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/weather02" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dip"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="后天"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tom_after_temperatureTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="24°C ~ 29°C"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3" >
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/failLoad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" >
+
+        <com.funo.park.widget.MyProgressBarImage
+            android:id="@+id/loadPb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" >
+        </com.funo.park.widget.MyProgressBarImage>
+
+        <ImageView
+            android:id="@+id/loadIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/refresh" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,1062 @@
+android.annotation.SuppressLint
+android.annotation.TargetApi
+com.a.a.a.b:
+    6:6:public b()
+com.amap.mapapi.busline.BusLineItem
+com.amap.mapapi.busline.BusPagedResult
+com.amap.mapapi.busline.BusQuery
+com.amap.mapapi.busline.BusQuery$SearchType
+com.amap.mapapi.busline.BusSearch
+com.amap.mapapi.busline.BusStationItem
+com.amap.mapapi.busline.a
+com.amap.mapapi.busline.a$a
+com.amap.mapapi.core.AMapException:
+    public static final java.lang.String ERROR_IO
+    public static final java.lang.String ERROR_SOCKET
+    public static final java.lang.String ERROR_SOCKE_TIME_OUT
+    public static final java.lang.String ERROR_INVALID_PARAMETER
+    public static final java.lang.String ERROR_NULL_PARAMETER
+    public static final java.lang.String ERROR_URL
+    public static final java.lang.String ERROR_UNKNOW_HOST
+    public static final java.lang.String ERROR_UNKNOW_SERVICE
+    public static final java.lang.String ERROR_PROTOCOL
+    public static final java.lang.String ERROR_CONNECTION
+    public static final java.lang.String ERROR_UNKNOWN
+com.amap.mapapi.core.GeoPoint:
+    279:279:public java.lang.String f()
+com.amap.mapapi.core.OverlayItem:
+    public static final int ITEM_STATE_FOCUSED_MASK
+    public static final int ITEM_STATE_SELECTED_MASK
+    public static final int ITEM_STATE_PRESSED_MASK
+    91:95:public static void setState(android.graphics.drawable.Drawable,int)
+    136:136:public java.lang.String routableAddress()
+com.amap.mapapi.core.PoiItem:
+    public static final java.lang.String DesSplit
+    61:61:public java.lang.String getXmlNode()
+    77:77:public java.lang.String getAdCode()
+    85:85:public java.lang.String getPoiId()
+com.amap.mapapi.core.b:
+    17:17:public b()
+com.amap.mapapi.core.c:
+    3:176:public c()
+com.amap.mapapi.core.d:
+    44:44:public d()
+    290:299:public static android.location.Location d(android.content.Context)
+com.amap.mapapi.core.f:
+    18:18:public f()
+com.amap.mapapi.core.n:
+    8:8:public n()
+com.amap.mapapi.core.q:
+    20:20:public q()
+com.amap.mapapi.core.r:
+    9:37:public r()
+com.amap.mapapi.core.w
+com.amap.mapapi.geocoder.Geocoder:
+    public static final java.lang.String Street_Road
+    public static final java.lang.String POI
+    public static final java.lang.String Cross
+    27:30:public Geocoder(android.content.Context)
+    52:67:public java.util.List getFromRawGpsLocation(double,double,int)
+    100:151:public java.util.List getFromLocationName(java.lang.String,int,double,double,double,double)
+    158:173:private java.util.List a(java.util.List,double,double,double,double,int)
+    178:178:public java.util.List getFromLocationName(java.lang.String,int)
+com.amap.mapapi.geocoder.a
+com.amap.mapapi.geocoder.b
+com.amap.mapapi.location.LocationManagerProxy:
+    public static final java.lang.String GPS_PROVIDER
+    public static final java.lang.String NETWORK_PROVIDER
+    public static final java.lang.String KEY_LOCATION_CHANGED
+    public static final java.lang.String KEY_PROVIDER_ENABLED
+    public static final java.lang.String KEY_PROXIMITY_ENTERING
+    public static final java.lang.String KEY_STATUS_CHANGED
+    private com.amap.mapapi.location.c e
+    private com.amap.mapapi.location.LocationManagerProxy$b f
+    private double j
+    private double k
+    private com.amap.mapapi.location.c o
+    private com.amap.mapapi.location.LocationManagerProxy$a p
+    53:56:private LocationManagerProxy(android.app.Activity)
+    70:77:public static synchronized com.amap.mapapi.location.LocationManagerProxy getInstance(android.app.Activity)
+    95:119:public void addProximityAlert(double,double,float,long,android.app.PendingIntent)
+    122:138:public void removeProximityAlert(android.app.PendingIntent)
+    141:149:public android.location.Location getLastKnownLocation(java.lang.String)
+    179:193:public void requestLocationUpdates(java.lang.String,long,float,android.app.PendingIntent)
+    196:202:public void removeUpdates(android.app.PendingIntent)
+    206:216:public java.util.List getAllProviders()
+    233:239:public java.util.List getProviders(android.location.Criteria,boolean)
+    288:291:public android.location.GpsStatus getGpsStatus(android.location.GpsStatus)
+    296:299:public void removeGpsStatusListener(android.location.GpsStatus$Listener)
+    303:306:public boolean addGpsStatusListener(android.location.GpsStatus$Listener)
+    315:321:public void addTestProvider(java.lang.String,boolean,boolean,boolean,boolean,boolean,boolean,boolean,int,int)
+    325:328:public void clearTestProviderEnabled(java.lang.String)
+    332:335:public void clearTestProviderLocation(java.lang.String)
+    339:342:public void clearTestProviderStatus(java.lang.String)
+    22:22:static synthetic java.util.ArrayList a(com.amap.mapapi.location.LocationManagerProxy)
+    22:22:static synthetic android.content.Context b(com.amap.mapapi.location.LocationManagerProxy)
+    22:22:static synthetic boolean c(com.amap.mapapi.location.LocationManagerProxy)
+    22:22:static synthetic java.util.ArrayList d(com.amap.mapapi.location.LocationManagerProxy)
+    22:22:static synthetic double e(com.amap.mapapi.location.LocationManagerProxy)
+    22:22:static synthetic double f(com.amap.mapapi.location.LocationManagerProxy)
+    22:22:static synthetic long g(com.amap.mapapi.location.LocationManagerProxy)
+    22:22:static synthetic double h(com.amap.mapapi.location.LocationManagerProxy)
+com.amap.mapapi.location.LocationManagerProxy$a
+com.amap.mapapi.location.LocationManagerProxy$b
+com.amap.mapapi.location.LocationProviderProxy:
+    public static final int AVAILABLE
+    public static final int OUT_OF_SERVICE
+    public static final int TEMPORARILY_UNAVAILABLE
+    public static final java.lang.String MapABCNetwork
+    34:37:public int getAccuracy()
+    42:45:public java.lang.String getName()
+    50:53:public int getPowerRequirement()
+    58:61:public boolean hasMonetaryCost()
+    79:82:public boolean requiresCell()
+    87:90:public boolean requiresNetwork()
+    95:98:public boolean requiresSatellite()
+    103:106:public boolean supportsAltitude()
+    111:114:public boolean supportsBearing()
+    119:122:public boolean supportsSpeed()
+com.amap.mapapi.location.a:
+    121:124:public android.location.Location b()
+com.amap.mapapi.map.ItemizedOverlay:
+    166:167:public com.amap.mapapi.core.GeoPoint getCenter()
+    187:187:public int getLatSpanE6()
+    191:191:public int getLonSpanE6()
+    199:200:public void setDrawFocusedItem(boolean)
+    203:203:public final int getLastFocusedIndex()
+    248:260:public com.amap.mapapi.core.OverlayItem nextFocus(boolean)
+    264:267:private com.amap.mapapi.core.OverlayItem a(int)
+    271:274:private com.amap.mapapi.core.OverlayItem b(int)
+    316:330:public boolean onSnapToItem(int,int,android.graphics.Point,com.amap.mapapi.map.MapView)
+com.amap.mapapi.map.ItemizedOverlay$b:
+    562:577:public int a(boolean)
+com.amap.mapapi.map.MapActivity:
+    78:79:public void setMapMode(int)
+    82:83:public void setCachInInstalledPackaget(boolean)
+    366:366:protected boolean isLocationDisplayed()
+    378:378:protected boolean isRouteDisplayed()
+com.amap.mapapi.map.MapController:
+    172:201:public void setFitView(java.util.List)
+    299:299:public boolean zoomOutFixing(int,int)
+    310:311:public void animateTo(com.amap.mapapi.core.GeoPoint,android.os.Message)
+    314:315:public void animateTo(com.amap.mapapi.core.GeoPoint,java.lang.Runnable)
+com.amap.mapapi.map.MapView:
+    private com.amap.mapapi.map.v q
+    331:331:public boolean isDoubleClickZooming()
+    345:346:public void registerTrackballListener(com.amap.mapapi.map.az$a)
+    359:367:public com.amap.mapapi.map.v getLayerMgr()
+    405:405:public int getLatitudeSpan()
+    411:411:public int getLongitudeSpan()
+    436:436:public java.lang.String getDebugVersion()
+    445:445:public java.lang.String getReleaseVersion()
+    457:457:public boolean canCoverCenter()
+    465:466:public void displayZoomControls(boolean)
+    490:490:public void preLoad()
+    740:740:public boolean isStreetView()
+    993:998:public int getScale(int)
+    1002:1005:public double getMetersPerPixel(int)
+    2529:2532:protected void getScreenPnt(int,int,android.graphics.Point)
+    2548:2556:protected void getScreenPntBy20Pixel(int,int,android.graphics.Point)
+    2589:2593:protected void getPixel20Pnt(android.graphics.Point,com.amap.mapapi.map.be,int,int)
+    2729:2732:protected void setMapCenterScreen(int,int)
+    2735:2739:protected void setMapCenter(int,int)
+com.amap.mapapi.map.MapView$LayoutParams:
+    public static final int MODE_MAP
+    public static final int MODE_VIEW
+    public static final int LEFT
+    public static final int RIGHT
+    public static final int TOP
+    public static final int BOTTOM
+    public static final int CENTER_HORIZONTAL
+    public static final int CENTER_VERTICAL
+    public static final int CENTER
+    public static final int TOP_LEFT
+    public static final int BOTTOM_CENTER
+com.amap.mapapi.map.MapView$d:
+    2050:2050:public MapView$d()
+com.amap.mapapi.map.MapView$f:
+    2044:2045:public void b(boolean)
+com.amap.mapapi.map.MapView$g:
+    1412:1412:public boolean b()
+    1416:1418:public void c(boolean)
+    1573:1573:public com.amap.mapapi.map.MapView$f f()
+    1577:1577:public com.amap.mapapi.map.MapView$f g()
+com.amap.mapapi.map.MyLocationOverlay:
+    72:72:public float getOrientation()
+    89:89:public boolean isCompassEnabled()
+    93:93:public boolean isMyLocationEnabled()
+    245:256:public boolean onSnapToItem(int,int,android.graphics.Point,com.amap.mapapi.map.MapView)
+com.amap.mapapi.map.Overlay:
+    protected static final float SHADOW_X_SKEW
+    protected static final float SHADOW_Y_SCALE
+com.amap.mapapi.map.Overlay$Snappable
+com.amap.mapapi.map.PoiOverlay:
+    123:127:public void enablePopup(boolean)
+    173:173:protected com.amap.mapapi.map.MapView$LayoutParams getLayoutParam()
+com.amap.mapapi.map.RouteOverlay:
+    public static final int OnOverview
+    public static final int OnDetail
+    public static final int OnPrev
+    public static final int OnNext
+    public static final int OnIconClick
+    77:83:public void setBusLinePaint(android.graphics.Paint)
+    89:95:public void setFootLinePaint(android.graphics.Paint)
+    101:107:public void setCarLinePaint(android.graphics.Paint)
+    126:130:public void enablePopup(boolean)
+    134:135:public void showRouteButton(boolean)
+    138:139:public void enableDrag(boolean)
+    224:225:public void unregisterRouteMessage(com.amap.mapapi.map.RouteMessageHandler)
+    254:257:public void showNextPopUpWindow()
+    260:263:public void showPrevPopUpWindow()
+    395:404:public void renewOverlay(com.amap.mapapi.map.MapView)
+com.amap.mapapi.map.ZoomButtonsController:
+    21:21:public android.view.ViewGroup getContainer()
+    30:30:public android.view.View getZoomControls()
+    41:41:public void setZoomSpeed(long)
+    53:53:public void setFocusable(boolean)
+    61:61:public boolean isAutoDismissed()
+    70:70:public void setAutoDismissed(boolean)
+    79:80:public void setZoomInEnabled(boolean)
+    88:88:public boolean isVisible()
+    98:99:public void setVisible(boolean)
+    108:109:public void setOnZoomListener(com.amap.mapapi.map.ZoomButtonsController$OnZoomListener)
+    122:123:public void setZoomOutEnabled(boolean)
+com.amap.mapapi.map.ac:
+    325:340:public com.amap.mapapi.map.au$a b()
+com.amap.mapapi.map.ad:
+    11:60:public ad()
+com.amap.mapapi.map.ah$a:
+    1021:1051:public boolean a(com.amap.mapapi.core.GeoPoint)
+com.amap.mapapi.map.au:
+    15:102:au()
+com.amap.mapapi.map.i:
+    8:8:public i()
+com.amap.mapapi.map.v
+com.amap.mapapi.offlinemap.City
+com.amap.mapapi.offlinemap.MOfflineMapStatus
+com.amap.mapapi.offlinemap.OfflineMapManager
+com.amap.mapapi.offlinemap.OfflineMapManager$OfflineMapDownloadListener
+com.amap.mapapi.offlinemap.a
+com.amap.mapapi.offlinemap.b
+com.amap.mapapi.offlinemap.c
+com.amap.mapapi.offlinemap.d
+com.amap.mapapi.offlinemap.e
+com.amap.mapapi.offlinemap.f
+com.amap.mapapi.offlinemap.g
+com.amap.mapapi.offlinemap.h
+com.amap.mapapi.offlinemap.i
+com.amap.mapapi.poisearch.PoiPagedResult:
+    53:53:public com.amap.mapapi.poisearch.PoiSearch$Query getQuery()
+    57:57:public com.amap.mapapi.poisearch.PoiSearch$SearchBound getBound()
+    88:88:public java.util.List getSearchSuggestions()
+com.amap.mapapi.poisearch.PoiSearch:
+    26:31:public PoiSearch(android.content.Context,java.lang.String,com.amap.mapapi.poisearch.PoiSearch$Query)
+    44:45:public void setPageSize(int)
+    51:52:public void setPoiNumber(int)
+    62:62:public com.amap.mapapi.poisearch.PoiSearch$Query getQuery()
+    66:66:public com.amap.mapapi.poisearch.PoiSearch$SearchBound getBound()
+com.amap.mapapi.poisearch.PoiSearch$Query:
+    75:76:public PoiSearch$Query(java.lang.String,java.lang.String)
+com.amap.mapapi.poisearch.PoiSearch$SearchBound:
+    public static final java.lang.String BOUND_SHAPE
+    public static final java.lang.String POLYGON_SHAPE
+    public static final java.lang.String RECTANGLE_SHAPE
+    public static final java.lang.String ELLIPSE_SHAPE
+    133:136:public PoiSearch$SearchBound(com.amap.mapapi.core.GeoPoint,com.amap.mapapi.core.GeoPoint)
+    138:146:public PoiSearch$SearchBound(com.amap.mapapi.map.MapView)
+    189:189:public int getLonSpanInMeter()
+    194:194:public int getLatSpanInMeter()
+com.amap.mapapi.poisearch.PoiTypeDef
+com.amap.mapapi.poisearch.a:
+    70:70:public com.amap.mapapi.poisearch.PoiSearch$Query d()
+    74:74:public com.amap.mapapi.poisearch.PoiSearch$SearchBound l()
+    78:78:public java.util.List m()
+com.amap.mapapi.route.BusSegment:
+    54:54:public java.lang.String[] getPassStopName()
+com.amap.mapapi.route.DriveWalkSegment:
+    public static final int NoAction
+com.amap.mapapi.route.Route:
+    public static final int BusDefault
+    public static final int BusSaveMoney
+    public static final int BusLeaseChange
+    public static final int BusLeaseWalk
+    public static final int BusMostComfortable
+    public static final int DrivingDefault
+    public static final int DrivingSaveMoney
+    public static final int DrivingLeastDistance
+    public static final int DrivingNoFastRoad
+    62:66:public int getLength()
+    70:102:private void b()
+    105:108:public com.amap.mapapi.core.GeoPoint getLowerLeftPoint()
+    112:115:public com.amap.mapapi.core.GeoPoint getUpperRightPoint()
+    183:183:public java.lang.String getStartPlace()
+    191:191:public java.lang.String getTargetPlace()
+    223:223:public int getSegmentIndex(com.amap.mapapi.route.Segment)
+com.amap.mapapi.route.Route$FromAndTo:
+    public static final int NoTrans
+    public static final int TransFromPoint
+    public static final int TransToPoint
+    public static final int TransBothPoint
+com.amap.mapapi.route.Segment:
+    29:29:public java.lang.String getConsumeTime()
+    37:64:private void a()
+    67:70:public com.amap.mapapi.core.GeoPoint getLowerLeftPoint()
+    74:77:public com.amap.mapapi.core.GeoPoint getUpperRightPoint()
+    101:107:private int b()
+    111:112:public com.amap.mapapi.route.Segment getPrev()
+    116:117:public com.amap.mapapi.route.Segment getNext()
+com.funo.park.BuildConfig
+com.funo.park.MainActivity:
+    public static final int PARK_LIST_GET_SUCCESS
+    public static final int PARK_LIST_GET_FAILED
+    public static final int PARK_DETAIL_GET_SUCCESS
+    public static final int PARK_DETAIL_GET_FAILED
+    public static final int SEARCH_ROUTE_RESULT_SUCCESS
+    public static final int SEARCH_ROUTE_RESULT_FAILED
+    public static final int MSG_VIEW_LONGPRESS
+    public static final int MSG_VIEW_ADDRESSNAME_FAIL
+    public static final int MSG_VIEW_ADDRESSNAME
+    public static final int MSG_VIEW_GET_ADDRESSNAME
+    public static final int POI_LIST_GET_SUCCESS
+    public static final int MSG_VIEW_GET_POI_ADDRESSNAME
+    public static final int MSG_VIEW_CLEAR
+    public static final int MSG_WEATHER_DATA
+    public static final int MSG_WEATHER_DATA_FAIL
+    public static final int FIRST_LOCATION
+    private android.content.SharedPreferences mSharedPreferences
+    private com.iflytek.ui.RecognizerDialog iatDialog
+    android.view.View pathView
+    882:884:public void searchRouteResult(com.amap.mapapi.core.GeoPoint,int)
+    1060:1083:private java.util.ArrayList distancePoiCopmpare(java.util.ArrayList,double)
+com.funo.park.R:
+    10:10:public R()
+com.funo.park.R$attr
+com.funo.park.R$color
+com.funo.park.R$id
+com.funo.park.R$layout
+com.funo.park.R$raw
+com.funo.park.R$string
+com.funo.park.R$style
+com.funo.park.adapter.AutoCompleteAdapter:
+    134:134:public java.util.ArrayList getAllItems()
+com.funo.park.adapter.BicycleCollectAdapter:
+    private com.funo.park.adapter.BicycleCollectAdapter$ViewHolder vh
+    private android.widget.TextView tv
+    private java.lang.String picUrl
+    private java.lang.String[] imagesUrl
+    private int mode
+    private com.funo.park.client.PDialogClass pDialogClass
+    private android.app.ProgressDialog progressDialog
+    private android.os.Handler mHandler
+    private com.amap.mapapi.core.GeoPoint startPoint
+    private com.amap.mapapi.core.GeoPoint endPoint
+    56:56:public com.funo.park.client.PDialogClass getpDialogClass()
+    60:61:public void setpDialogClass(com.funo.park.client.PDialogClass)
+    64:64:public android.app.ProgressDialog getProgressDialog()
+    68:69:public void setProgressDialog(android.app.ProgressDialog)
+    151:176:public void searchRouteResult(com.amap.mapapi.core.GeoPoint,com.amap.mapapi.core.GeoPoint)
+    49:49:static synthetic int access$1(com.funo.park.adapter.BicycleCollectAdapter)
+    52:52:static synthetic android.os.Handler access$2(com.funo.park.adapter.BicycleCollectAdapter)
+com.funo.park.adapter.BicycleCollectAdapter$3
+com.funo.park.adapter.BicycleListAdapter:
+    private com.funo.park.adapter.BicycleListAdapter$ViewHolder vh
+    private android.widget.TextView tv
+    private java.lang.String picUrl
+    private java.lang.String[] imagesUrl
+com.funo.park.adapter.RoadListAdapter:
+    java.lang.String road
+com.funo.park.bicycle.PublicBicycleCollectActivity:
+    private com.amap.mapapi.map.RouteOverlay ol
+com.funo.park.bicycle.PublicBicycleRoadLineActivity:
+    private com.amap.mapapi.core.GeoPoint aGeoPoint
+com.funo.park.client.HttpManager
+com.funo.park.client.ImitationHttpClient:
+    private android.os.Handler handler
+    private java.util.Timer timer
+    197:219:public java.lang.Object doPost(java.lang.Object,java.lang.Class,java.lang.String)
+    230:238:public java.lang.String doGet(java.lang.String)
+    248:267:public java.lang.String doPost(java.lang.String,java.lang.String,java.lang.String)
+    279:297:public java.lang.String doPut(java.lang.String,java.util.Map)
+    306:313:public java.lang.String doDelete(org.apache.http.client.methods.HttpDelete)
+com.funo.park.client.PDialogClass:
+    20:20:public boolean isMb()
+com.funo.park.client.ParkClient:
+    30:32:public com.funo.park.client.po.BaseRspInfo addPark(com.funo.park.client.po.ParkAddInfo)
+    52:55:public com.funo.park.client.po.ParkDetailReturnInfo getParkById(com.funo.park.client.po.ParkDetailInfo)
+com.funo.park.client.po.BaseReqInfo:
+    9:9:public java.lang.String getBusiness()
+    15:15:public java.lang.String getMethod()
+com.funo.park.client.po.BaseRspInfo:
+    protected java.lang.String returnName
+    13:14:public void setReturnCode(java.lang.String)
+    17:17:public java.lang.String getReturnName()
+    21:22:public void setReturnName(java.lang.String)
+com.funo.park.client.po.ParkAddInfo
+com.funo.park.client.po.ParkDetailInfo
+com.funo.park.client.po.ParkDetailInfo$ParkDetailData
+com.funo.park.client.po.ParkDetailReturnInfo
+com.funo.park.client.po.ParkDetailReturnInfo$ParkDetailReturnData
+com.funo.park.client.po.ParkListInfo:
+    65:65:public java.util.List getParkListData()
+com.funo.park.client.po.ParkListInfo$ParkListData:
+    protected java.lang.String method
+    protected java.lang.String parkName
+    23:23:public java.lang.String getParkName()
+    27:28:public void setParkName(java.lang.String)
+    31:31:public java.lang.String getArea()
+    39:39:public java.lang.String getStartRecord()
+    47:47:public java.lang.String getPageSize()
+    55:55:public java.lang.String getMethod()
+    59:60:public void setMethod(java.lang.String)
+com.funo.park.client.po.ParkListReturnInfo:
+    private java.lang.String returnName
+    19:20:public void setReturnCode(java.lang.String)
+    23:23:public java.lang.String getReturnName()
+    27:28:public void setReturnName(java.lang.String)
+    35:36:public void setList(java.util.List)
+com.funo.park.client.po.ParkListReturnInfo$ParkListReturnData:
+    private java.lang.String id
+    private java.lang.String code
+    private java.lang.String keywords
+    private java.lang.Long usedNum
+    private java.lang.String isOrder
+    private java.lang.Long orderNum
+    private java.lang.Long freeOrderNum
+    private java.lang.Long orderedNum
+    private java.lang.String notice
+    private java.util.Date updateTime
+    private java.lang.String area
+    private java.lang.String state
+    private java.lang.String payType
+    private java.lang.String merid
+    private java.lang.String psType
+    private java.lang.String extra
+    private java.lang.Integer isSyschron
+    private java.lang.Integer orderNo
+    private java.lang.Integer parkType
+    118:118:public java.lang.String getDis()
+    126:126:public java.lang.String getNumStr()
+    147:147:public java.lang.String getId()
+    151:152:public void setId(java.lang.String)
+    163:163:public java.lang.String getCode()
+    167:168:public void setCode(java.lang.String)
+    179:179:public java.lang.String getKeywords()
+    183:184:public void setKeywords(java.lang.String)
+    203:203:public java.lang.Long getUsedNum()
+    207:208:public void setUsedNum(java.lang.Long)
+    211:211:public java.lang.String getIsOrder()
+    215:216:public void setIsOrder(java.lang.String)
+    219:219:public java.lang.Long getOrderNum()
+    223:224:public void setOrderNum(java.lang.Long)
+    227:227:public java.lang.Long getFreeOrderNum()
+    231:232:public void setFreeOrderNum(java.lang.Long)
+    235:235:public java.lang.Long getOrderedNum()
+    239:240:public void setOrderedNum(java.lang.Long)
+    243:243:public java.lang.String getNotice()
+    247:248:public void setNotice(java.lang.String)
+    251:251:public java.util.Date getUpdateTime()
+    255:256:public void setUpdateTime(java.util.Date)
+    263:264:public void setLongitude(java.lang.String)
+    271:272:public void setLatitude(java.lang.String)
+    275:275:public java.lang.String getArea()
+    279:280:public void setArea(java.lang.String)
+    283:283:public java.lang.String getState()
+    287:288:public void setState(java.lang.String)
+    291:291:public java.lang.String getPayType()
+    295:296:public void setPayType(java.lang.String)
+    299:299:public java.lang.String getMerid()
+    303:304:public void setMerid(java.lang.String)
+    307:307:public java.lang.String getPsType()
+    311:312:public void setPsType(java.lang.String)
+    315:315:public java.lang.String getExtra()
+    319:320:public void setExtra(java.lang.String)
+    331:331:public java.lang.Integer getIsSyschron()
+    335:336:public void setIsSyschron(java.lang.Integer)
+    339:339:public java.lang.Integer getOrderNo()
+    343:344:public void setOrderNo(java.lang.Integer)
+    347:347:public java.lang.Integer getParkType()
+    351:352:public void setParkType(java.lang.Integer)
+com.funo.park.data.DataFile:
+    11:11:public DataFile()
+com.funo.park.data.FunoConst
+com.funo.park.data.PublicVar:
+    36:42:public static void saveFile(java.lang.String)
+    44:68:public static void getJsonFromFile(java.io.File)
+com.funo.park.database.SQLiteDataBaseHelper:
+    68:71:public android.database.sqlite.SQLiteDatabase openDataBase(java.lang.String,java.lang.String)
+com.funo.park.info.LocationInfo:
+    67:67:public int getNumber()
+com.funo.park.info.RouteInfo:
+    private com.amap.mapapi.core.GeoPoint geoPoint
+    24:24:public com.amap.mapapi.core.GeoPoint getGeoPoint()
+    27:28:public void setGeoPoint(com.amap.mapapi.core.GeoPoint)
+com.funo.park.info.SearchInfo:
+    8:8:public int getId()
+    20:20:public int getIsDel()
+com.funo.park.info.WeatherInfo:
+    private java.lang.String addTime
+    private java.lang.String cityid
+    private java.lang.String cname
+    private java.lang.String provid
+    private java.lang.String seqnum
+    private java.lang.String temperature
+    private java.lang.String weathervane
+    private java.lang.String windpower
+    19:19:public java.lang.String getCityName()
+    25:25:public java.lang.String getAddTime()
+    28:29:public void setAddTime(java.lang.String)
+    37:37:public java.lang.String getCityid()
+    40:41:public void setCityid(java.lang.String)
+    43:43:public java.lang.String getCname()
+    46:47:public void setCname(java.lang.String)
+    61:61:public java.lang.String getProvid()
+    64:65:public void setProvid(java.lang.String)
+    67:67:public java.lang.String getSeqnum()
+    70:71:public void setSeqnum(java.lang.String)
+    73:73:public java.lang.String getTemperature()
+    76:77:public void setTemperature(java.lang.String)
+    79:79:public java.lang.String getWeatdate()
+    91:91:public java.lang.String getWeathervane()
+    94:95:public void setWeathervane(java.lang.String)
+    97:97:public java.lang.String getWindpower()
+    100:101:public void setWindpower(java.lang.String)
+com.funo.park.mode.BicycleStationList:
+    14:15:public void setData(java.util.List)
+com.funo.park.update.UpdateService:
+    public android.app.ProgressDialog pBar
+com.funo.park.util.BaseConstant:
+    public static final java.lang.String DATA_BASE_PATH
+    public static final java.lang.String DATA_BASE_NAME
+    public static final java.lang.String DATA_TABLE_NAME_W
+    public static final java.lang.String DATA_TABLE_NAME_S
+    public static final int dbVersion
+    public static final java.lang.String cityName
+    public static final java.lang.String cityCode
+    public static final int POISEARCH
+    public static final int POI_OTHER_SEARCH
+    public static final int ERROR
+    public static final int FIRST_LOCATION
+    public static final int SEARCH
+    public static final int NOTHING
+    public static final int HIDE
+    public static final java.lang.String UPDATE_GETVERSION_URL
+    public static final java.lang.String UPDATE_DOWNLOAD_URL
+    public static final java.lang.String APK_NAME
+    public static final java.lang.String WEATHER_URL
+    public static java.lang.StringBuilder voiceStr
+    public static java.util.List prdList
+    public static long fileLength
+    18:18:public BaseConstant()
+    83:92:public static java.lang.String ToDBC(java.lang.String)
+com.funo.park.util.BicycleItemizeOverlay1:
+    46:47:public void setpDialogClass(com.funo.park.client.PDialogClass)
+    53:54:public void setProgressDialog(android.app.ProgressDialog)
+    77:82:public void addOverlayItem(com.amap.mapapi.core.OverlayItem)
+    108:115:public java.lang.String changeLine(java.lang.String,int)
+com.funo.park.util.BicycleLocationOverlay:
+    37:42:public void addOverlayItems(java.util.List)
+    60:67:public java.lang.String changeLine(java.lang.String,int)
+com.funo.park.util.CommonUtil:
+    25:25:public CommonUtil()
+    32:35:public static java.lang.String formatToDate(java.util.Date)
+    47:51:public static java.lang.String getDateString(java.util.Date,java.lang.String)
+    60:68:public static java.lang.String getTimeStr(java.lang.String,java.lang.String)
+    75:78:public static boolean validatorStr(java.lang.String,java.lang.String)
+com.funo.park.util.DistanceUtil:
+    private static final double EARTH_RADIUS
+    3:3:public DistanceUtil()
+com.funo.park.util.IndexItemizedOverlay:
+    private static final java.lang.String TAG
+    private com.amap.mapapi.core.OverlayItem selectItem
+    private com.amap.mapapi.core.OverlayItem lastItem
+    48:48:public java.util.List getOverlays()
+    52:53:public void setOverlays(java.util.List)
+    69:71:public void setItemSelectDrawable(android.graphics.drawable.Drawable)
+    74:75:public void setItemDrawables(android.graphics.drawable.Drawable[])
+    77:78:public IndexItemizedOverlay(android.graphics.drawable.Drawable)
+    90:92:public void DrawIcon(android.graphics.drawable.Drawable)
+    111:112:public void removeOverlay(int)
+    115:118:public void removeAllOverlay()
+com.funo.park.util.MyItemizedOverlay:
+    private static final java.lang.String TAG
+    private com.amap.mapapi.core.OverlayItem lastItem
+    48:48:public java.util.List getOverlays()
+    52:53:public void setOverlays(java.util.List)
+    117:119:public void setItemSelectDrawable(android.graphics.drawable.Drawable)
+    122:123:public void setItemDrawables(android.graphics.drawable.Drawable[])
+    125:126:public MyItemizedOverlay(android.graphics.drawable.Drawable)
+    128:139:public MyItemizedOverlay(android.graphics.drawable.Drawable,android.content.Context,com.amap.mapapi.map.MapView,android.view.View,com.amap.mapapi.map.MapController,boolean)
+    169:171:public void DrawIcon(android.graphics.drawable.Drawable)
+    209:212:public void removeAllOverlay()
+com.funo.park.util.MyOverlayItem:
+    25:26:public void setObj(java.lang.Object)
+com.funo.park.util.MyPoiItemizedOverlay:
+    private static final java.lang.String TAG
+    private com.amap.mapapi.core.OverlayItem lastItem
+    43:43:public java.util.List getOverlays()
+    47:48:public void setOverlays(java.util.List)
+    112:114:public void setItemSelectDrawable(android.graphics.drawable.Drawable)
+    117:118:public void setItemDrawables(android.graphics.drawable.Drawable[])
+    120:121:public MyPoiItemizedOverlay(android.graphics.drawable.Drawable)
+    123:134:public MyPoiItemizedOverlay(android.graphics.drawable.Drawable,android.content.Context,com.amap.mapapi.map.MapView,android.view.View,com.amap.mapapi.map.MapController,boolean)
+    164:166:public void DrawIcon(android.graphics.drawable.Drawable)
+    197:200:public void removeAllOverlay()
+com.funo.park.util.MyPoiOverlay:
+    34:39:public MyPoiOverlay(com.funo.park.MainActivity,android.graphics.drawable.Drawable,java.util.List)
+com.funo.park.util.PropertiesUtil:
+    8:8:public PropertiesUtil()
+com.funo.park.util.ReflectUtil:
+    16:16:public ReflectUtil()
+com.google.gson.DefaultDateTypeAdapter
+com.google.gson.FieldAttributes:
+    53:53:public java.lang.Class getDeclaringClass()
+    60:60:public java.lang.String getName()
+    80:80:public java.lang.reflect.Type getDeclaredType()
+    100:100:public java.lang.Class getDeclaredClass()
+    111:111:public java.lang.annotation.Annotation getAnnotation(java.lang.Class)
+    121:121:public java.util.Collection getAnnotations()
+    135:135:public boolean hasModifier(int)
+    146:146:java.lang.Object get(java.lang.Object)
+    155:155:boolean isSynthetic()
+com.google.gson.Gson:
+    static final boolean DEFAULT_JSON_NON_EXECUTABLE
+    private static final java.lang.String JSON_NON_EXECUTABLE_PREFIX
+    451:454:public com.google.gson.JsonElement toJsonTree(java.lang.Object)
+    474:476:public com.google.gson.JsonElement toJsonTree(java.lang.Object,java.lang.reflect.Type)
+    535:540:public void toJson(java.lang.Object,java.lang.Appendable)
+    729:732:public java.lang.Object fromJson(java.io.Reader,java.lang.Class)
+    828:829:public java.lang.Object fromJson(com.google.gson.JsonElement,java.lang.Class)
+    852:855:public java.lang.Object fromJson(com.google.gson.JsonElement,java.lang.reflect.Type)
+com.google.gson.Gson$2:
+    131:131:public java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type)
+com.google.gson.Gson$3:
+    137:137:public com.google.gson.JsonElement serialize(java.lang.Object)
+    140:140:public com.google.gson.JsonElement serialize(java.lang.Object,java.lang.reflect.Type)
+com.google.gson.GsonBuilder
+com.google.gson.JsonArray:
+    61:62:public void addAll(com.google.gson.JsonArray)
+    70:70:public int size()
+    92:92:public com.google.gson.JsonElement get(int)
+    154:157:public java.math.BigDecimal getAsBigDecimal()
+    171:174:public java.math.BigInteger getAsBigInteger()
+    187:190:public float getAsFloat()
+    227:230:public byte getAsByte()
+    235:238:public char getAsCharacter()
+    251:254:public short getAsShort()
+com.google.gson.JsonDeserializationContext:
+    public abstract java.lang.Object deserialize(com.google.gson.JsonElement,java.lang.reflect.Type)
+com.google.gson.JsonDeserializer
+com.google.gson.JsonElement:
+    130:133:public com.google.gson.JsonNull getAsJsonNull()
+    211:211:public float getAsFloat()
+    251:251:public byte getAsByte()
+    265:265:public char getAsCharacter()
+    279:279:public java.math.BigDecimal getAsBigDecimal()
+    293:293:public java.math.BigInteger getAsBigInteger()
+    306:306:public short getAsShort()
+com.google.gson.JsonIOException:
+    private static final long serialVersionUID
+    33:34:public JsonIOException(java.lang.String,java.lang.Throwable)
+com.google.gson.JsonObject:
+    68:68:public com.google.gson.JsonElement remove(java.lang.String)
+    79:80:public void addProperty(java.lang.String,java.lang.String)
+    90:91:public void addProperty(java.lang.String,java.lang.Number)
+    101:102:public void addProperty(java.lang.String,java.lang.Boolean)
+    112:113:public void addProperty(java.lang.String,java.lang.Character)
+    122:122:private com.google.gson.JsonElement createJsonElement(java.lang.Object)
+    142:142:public boolean has(java.lang.String)
+    152:156:public com.google.gson.JsonElement get(java.lang.String)
+    166:166:public com.google.gson.JsonPrimitive getAsJsonPrimitive(java.lang.String)
+    176:176:public com.google.gson.JsonArray getAsJsonArray(java.lang.String)
+    186:186:public com.google.gson.JsonObject getAsJsonObject(java.lang.String)
+com.google.gson.JsonParseException:
+    static final long serialVersionUID
+com.google.gson.JsonParser
+com.google.gson.JsonPrimitive:
+    74:76:public JsonPrimitive(java.lang.Character)
+    84:86:JsonPrimitive(java.lang.Object)
+    199:199:public java.math.BigDecimal getAsBigDecimal()
+    210:210:public java.math.BigInteger getAsBigInteger()
+    222:222:public float getAsFloat()
+    244:244:public short getAsShort()
+    260:260:public byte getAsByte()
+    265:265:public char getAsCharacter()
+com.google.gson.JsonSerializationContext:
+    public abstract com.google.gson.JsonElement serialize(java.lang.Object)
+    public abstract com.google.gson.JsonElement serialize(java.lang.Object,java.lang.reflect.Type)
+com.google.gson.JsonSerializer
+com.google.gson.JsonStreamParser
+com.google.gson.JsonSyntaxException:
+    private static final long serialVersionUID
+com.google.gson.LongSerializationPolicy:
+    public abstract com.google.gson.JsonElement serialize(java.lang.Long)
+com.google.gson.LongSerializationPolicy$1:
+    36:36:public com.google.gson.JsonElement serialize(java.lang.Long)
+com.google.gson.LongSerializationPolicy$2:
+    47:47:public com.google.gson.JsonElement serialize(java.lang.Long)
+com.google.gson.TreeTypeAdapter
+com.google.gson.TreeTypeAdapter$1
+com.google.gson.TreeTypeAdapter$SingleTypeFactory
+com.google.gson.TypeAdapter:
+    141:143:public final void toJson(java.io.Writer,java.lang.Object)
+    186:186:public final com.google.gson.TypeAdapter nullSafe()
+    215:217:public final java.lang.String toJson(java.lang.Object)
+    255:256:public final java.lang.Object fromJson(java.io.Reader)
+    269:269:public final java.lang.Object fromJson(java.lang.String)
+    280:283:public final java.lang.Object fromJsonTree(com.google.gson.JsonElement)
+com.google.gson.TypeAdapter$1
+com.google.gson.internal.$Gson$Preconditions:
+    32:32:public $Gson$Preconditions()
+com.google.gson.internal.$Gson$Types:
+    45:45:private $Gson$Types()
+com.google.gson.internal.$Gson$Types$GenericArrayTypeImpl:
+    private static final long serialVersionUID
+com.google.gson.internal.$Gson$Types$ParameterizedTypeImpl:
+    private static final long serialVersionUID
+com.google.gson.internal.$Gson$Types$WildcardTypeImpl:
+    private static final long serialVersionUID
+com.google.gson.internal.Excluder:
+    private static final double IGNORE_VERSIONS
+    70:72:public com.google.gson.internal.Excluder withVersion(double)
+    76:81:public varargs com.google.gson.internal.Excluder withModifiers(int[])
+    85:87:public com.google.gson.internal.Excluder disableInnerClassSerialization()
+    91:93:public com.google.gson.internal.Excluder excludeFieldsWithoutExposeAnnotation()
+    98:108:public com.google.gson.internal.Excluder withExclusionStrategy(com.google.gson.ExclusionStrategy,boolean,boolean)
+com.google.gson.internal.Primitives:
+    32:32:private Primitives()
+    80:80:public static boolean isWrapperType(java.lang.reflect.Type)
+    113:115:public static java.lang.Class unwrap(java.lang.Class)
+com.google.gson.internal.Streams:
+    35:78:public Streams()
+    40:59:public static com.google.gson.JsonElement parse(com.google.gson.stream.JsonReader)
+com.google.gson.internal.StringMap:
+    private static final int MINIMUM_CAPACITY
+    private static final int MAXIMUM_CAPACITY
+com.google.gson.internal.bind.JsonTreeReader:
+    53:55:public JsonTreeReader(com.google.gson.JsonElement)
+com.google.gson.internal.bind.JsonTreeWriter:
+    163:167:public com.google.gson.stream.JsonWriter value(double)
+    192:192:public void flush()
+com.google.gson.internal.bind.TypeAdapters:
+    58:58:private TypeAdapters()
+    760:760:public static com.google.gson.TypeAdapterFactory newFactory(com.google.gson.reflect.TypeToken,com.google.gson.TypeAdapter)
+com.google.gson.internal.bind.TypeAdapters$23:
+    private static final java.lang.String YEAR
+    private static final java.lang.String MONTH
+    private static final java.lang.String DAY_OF_MONTH
+    private static final java.lang.String HOUR_OF_DAY
+    private static final java.lang.String MINUTE
+    private static final java.lang.String SECOND
+com.google.gson.internal.bind.TypeAdapters$27
+com.google.gson.reflect.TypeToken:
+    112:112:public boolean isAssignableFrom(java.lang.Class)
+    123:140:public boolean isAssignableFrom(java.lang.reflect.Type)
+    153:153:public boolean isAssignableFrom(com.google.gson.reflect.TypeToken)
+    161:178:private static boolean isAssignableFrom(java.lang.reflect.Type,java.lang.reflect.GenericArrayType)
+    188:231:private static boolean isAssignableFrom(java.lang.reflect.Type,java.lang.reflect.ParameterizedType,java.util.Map)
+    240:250:private static boolean typeEquals(java.lang.reflect.ParameterizedType,java.lang.reflect.ParameterizedType,java.util.Map)
+    257:265:private static varargs java.lang.AssertionError buildUnexpectedTypeError(java.lang.reflect.Type,java.lang.Class[])
+    273:273:private static boolean matches(java.lang.reflect.Type,java.lang.reflect.Type,java.util.Map)
+com.google.gson.stream.JsonReader:
+    private static final java.lang.String TRUE
+    private static final java.lang.String FALSE
+com.google.gson.stream.JsonWriter:
+    446:452:public com.google.gson.stream.JsonWriter value(double)
+    495:499:public void flush()
+com.google.gson.stream.MalformedJsonException:
+    private static final long serialVersionUID
+    33:37:public MalformedJsonException(java.lang.String,java.lang.Throwable)
+    39:43:public MalformedJsonException(java.lang.Throwable)
+com.iflytek.Version
+com.iflytek.a.a:
+    public com.iflytek.a.a$a a()
+com.iflytek.a.c:
+    public void a(java.util.ArrayList,int,int,int)
+    public boolean a(int)
+com.iflytek.a.c$a:
+    final synthetic com.iflytek.a.c e
+    public c$a(com.iflytek.a.c,long,long,int,int)
+com.iflytek.msc.MSC:
+    public MSC()
+    public static native int DebugLog(boolean)
+    public static native int QMSPLogOut()
+com.iflytek.msc.MSCSessionInfo:
+    private int qisrValueLen
+    private int qhcrErrCode
+    private int qhcrRsltStatus
+    private int qmspValueLen
+    public void setQisrParamValue(char[])
+    public int getQisrValueLen()
+    public int getQhcrErrCode()
+    public int getQhcrRsltStatus()
+    public int getQttsAudioLen()
+    public byte[] getQttsAudioData()
+    public void setQisrEpStatus(int)
+    public int getQmspDataLen()
+com.iflytek.msc.a:
+    public a()
+com.iflytek.msc.a.b:
+    public b()
+com.iflytek.msc.a.c:
+    public c()
+com.iflytek.msc.a.f:
+    public f()
+    public static boolean a(android.os.MemoryFile,long,java.lang.String)
+com.iflytek.msc.a.g:
+    public g()
+com.iflytek.msc.a.h:
+    public h()
+com.iflytek.msc.a.i:
+    private i()
+com.iflytek.msc.b.a:
+    public a(android.content.Context)
+com.iflytek.msc.b.b:
+    public static boolean a()
+    public static int c(java.lang.String)
+com.iflytek.msc.c.a:
+    public static int c(java.lang.String)
+com.iflytek.msc.msp.MSPUser:
+    public void searchText(com.iflytek.msc.msp.MSPListener,java.lang.String,java.lang.String)
+    public void uploadData(com.iflytek.msc.msp.MSPListener,java.lang.String,java.lang.String,byte[])
+    public void cancel()
+    public boolean blockDestory(int)
+    public boolean destory()
+com.iflytek.msc.msp.MSPUser$b:
+    public void a(com.iflytek.msc.msp.MSPListener,java.lang.String,java.lang.String)
+    public void a(com.iflytek.msc.msp.MSPListener,java.lang.String,java.lang.String,byte[])
+    public void a()
+com.iflytek.msc.msp.b:
+    public static void a()
+com.iflytek.resource.MscSetting:
+    public MscSetting()
+    public static void setLogSaved(boolean)
+    public static void setModeComplex(boolean)
+    public static void setShowLog(boolean)
+    public static void setShowError(boolean)
+    public static void setShowErrorCode(boolean)
+    public static void setCheckNetwork(boolean)
+    public static void setLanguage(int)
+com.iflytek.resource.a:
+    public a()
+    public static void a(int)
+com.iflytek.resource.b:
+    public b()
+com.iflytek.resource.c:
+    public c()
+com.iflytek.speech.SpeechConfig:
+    public static final int Rate16K
+    public static final int Rate8K
+    public static final int Rate11K
+    public static final int Rate22K
+    public SpeechConfig()
+    public static void a(com.iflytek.speech.SpeechConfig$RATE)
+    public static void a(int)
+    public static void c(com.iflytek.speech.SpeechConfig$RATE)
+    public static void a(java.lang.String)
+    public static void b(int)
+    public static void c(int)
+    public static void d(int)
+    public static void b(java.lang.String)
+com.iflytek.speech.SpeechError:
+    private static final long serialVersionUID
+    public static final int UNKNOWN
+    public static final int ERROR_NO_NETWORK
+    public static final int ERROR_NETWORK_TIMEOUT
+    public static final int ERROR_NET_EXPECTION
+    public static final int ERROR_INSUFFICIENT_PERMISSIONS
+    public static final int ERROR_INVALID_RESULT
+    public static final int ERROR_SERVER_CONNECT
+    public static final int ERROR_INVALID_PARAM
+    public static final int ERROR_CLIENT
+    public static final int ERROR_AUDIO_RECORD
+    public static final int ERROR_NO_MATCH
+    public static final int ERROR_SPEECH_TIMEOUT
+    public static final int ERROR_INVALID_ENCODING
+    public static final int ERROR_EMPTY_UTTERANCE
+    public static final int ERROR_FILE_ACCESS
+    public static final int ERROR_PLAY_MEDIA
+    public static final int ERROR_MEMORY_WRANING
+    public static final int ERROR_TEXT_OVERFLOW
+    public static final int ERROR_LOGIN
+    public static final int ERROR_IN_USE
+    public static final int ERROR_INVALID_DATA
+    public static final int ERROR_INVALID_GRAMMAR
+    public static final int ERROR_INVALID_LOCAL_RESOURCE
+    public static final int ERROR_LOGIN_INVALID_USER
+    public static final int ERROR_LOGIN_INVALID_PWD
+    public int getErrorType()
+    public java.lang.String getErrorDesc()
+com.iflytek.speech.SynthesizerPlayer:
+    public static com.iflytek.speech.SynthesizerPlayer createSynthesizerPlayer(android.content.Context,java.lang.String)
+    public static com.iflytek.speech.SynthesizerPlayer getSynthesizerPlayer()
+    private SynthesizerPlayer(android.content.Context,java.lang.String)
+    public com.iflytek.a.a$a getState()
+    public int getDownflowBytes(boolean)
+    public int getUpflowBytes(boolean)
+    public void setPitch(int)
+    public void setVoiceName(java.lang.String)
+    public void setSampleRate(com.iflytek.speech.SpeechConfig$RATE)
+    public void setSpeed(int)
+    public void setVolume(int)
+    public void setBackgroundSound(java.lang.String)
+    static synthetic com.iflytek.speech.SynthesizerPlayerListener a(com.iflytek.speech.SynthesizerPlayer)
+    static synthetic com.iflytek.a.c b(com.iflytek.speech.SynthesizerPlayer)
+    static synthetic boolean c(com.iflytek.speech.SynthesizerPlayer)
+    static synthetic int d(com.iflytek.speech.SynthesizerPlayer)
+    static synthetic void a(com.iflytek.speech.SynthesizerPlayer,boolean)
+    static synthetic com.iflytek.a.a e(com.iflytek.speech.SynthesizerPlayer)
+    static synthetic com.iflytek.a.a$b f(com.iflytek.speech.SynthesizerPlayer)
+    static synthetic android.content.Context g(com.iflytek.speech.SynthesizerPlayer)
+    static synthetic com.iflytek.speech.d h(com.iflytek.speech.SynthesizerPlayer)
+com.iflytek.speech.SynthesizerPlayerListener:
+    public abstract void onPlayBegin()
+    public abstract void onBufferPercent(int,int,int)
+    public abstract void onPlayPaused()
+    public abstract void onPlayResumed()
+    public abstract void onPlayPercent(int,int,int)
+    public abstract void onEnd(com.iflytek.speech.SpeechError)
+com.iflytek.speech.a:
+    public static com.iflytek.speech.a a(android.content.Context,java.lang.String)
+    protected a(android.content.Context,java.lang.String)
+com.iflytek.speech.b:
+    public int a(boolean)
+    public int b(boolean)
+    public void a(com.iflytek.speech.SpeechConfig$RATE)
+    public void a(int)
+com.iflytek.speech.d:
+    public static com.iflytek.speech.d a(android.content.Context,java.lang.String)
+    private d(android.content.Context,java.lang.String)
+    public int a(boolean)
+    public int b(boolean)
+    public void a(int)
+    public void a(java.lang.String)
+    public void a(com.iflytek.speech.SpeechConfig$RATE)
+    public void b(int)
+    public void c(int)
+    public void b(java.lang.String)
+    static synthetic android.content.Context a(com.iflytek.speech.d)
+    static synthetic java.lang.String c()
+com.iflytek.speech.g
+com.iflytek.speech.j
+com.iflytek.speech.k
+com.iflytek.ui.RecognizerDialog:
+    public void setSampleRate(com.iflytek.speech.SpeechConfig$RATE)
+    public int getDownflowBytes(boolean)
+    public int getUpflowBytes(boolean)
+    public void setRecordInterval(int)
+    public long getComsuingTime()
+com.iflytek.ui.SynthesizerDialog
+com.iflytek.ui.SynthesizerDialogListener
+com.iflytek.ui.UploadDialog
+com.iflytek.ui.b:
+    public android.view.View a()
+com.iflytek.ui.c:
+    public c()
+com.iflytek.ui.g:
+    public g(android.content.Context,java.lang.String)
+    public void a(com.iflytek.ui.UploadDialogListener)
+    public void a(byte[],java.lang.String,java.lang.String)
+    private void h()
+com.iflytek.ui.p:
+    public void a(com.iflytek.speech.SpeechConfig$RATE)
+    public int a(boolean)
+    public int b(boolean)
+    public void a(int)
+    public long e()
+com.iflytek.ui.q:
+    private com.iflytek.ui.SynthesizerDialogListener h
+    private static synthetic int[] r
+    public q(android.content.Context,java.lang.String)
+    public void a(java.lang.String,java.lang.String)
+    public void a(com.iflytek.speech.SpeechConfig$RATE)
+    public void a(int)
+    public void a(java.lang.String)
+    public void b(int)
+    public void a(com.iflytek.ui.SynthesizerDialogListener)
+    public void c(int)
+    public void b(java.lang.String)
+    public com.iflytek.a.a$a e()
+    public void f()
+    public void g()
+    private void j()
+    private void n()
+    private void a(com.iflytek.speech.SpeechError)
+    private void o()
+    private void p()
+    private void q()
+    public int a(boolean)
+    public int b(boolean)
+    static synthetic android.widget.ProgressBar a(com.iflytek.ui.q)
+    static synthetic void b(com.iflytek.ui.q)
+    static synthetic android.widget.ImageButton c(com.iflytek.ui.q)
+    static synthetic void d(com.iflytek.ui.q)
+    static synthetic com.iflytek.ui.SynthesizerDialogListener e(com.iflytek.ui.q)
+    static synthetic void a(com.iflytek.ui.q,com.iflytek.speech.SpeechError)
+    static synthetic void f(com.iflytek.ui.q)
+    static synthetic int[] i()
+    static synthetic android.widget.Button g(com.iflytek.ui.q)
+    static synthetic android.widget.Button h(com.iflytek.ui.q)
+com.iflytek.ui.u:
+    public u()
+com.iflytek.ui.v
+com.iflytek.ui.w
+com.mapabc.minimap.map.vmap.NativeMap:
+    public static final java.lang.String MINIMAP_VERSION
+    24:27:public NativeMap(android.content.Context)
+    49:50:public void resetLabelManager()
+    54:54:public void setDrawMode(int)
+    67:68:public void px20ToScreen(int,int,com.amap.mapapi.map.be)
+    71:72:public void pxToScreen(int,int,com.amap.mapapi.map.be)
+    75:76:public void ScreenToPx20(int,int,com.amap.mapapi.map.be)
+    79:80:public void ScreenToPx(int,int,com.amap.mapapi.map.be)
+    83:83:public int getMapWidth()
+    87:87:public int getMapHeight()
+    91:91:public int getMapAngle()
+    95:95:public int getMapCenterX()
+    99:99:public int getMapCenterY()
+    103:103:public int getMapLevel()
+    107:108:public void setMapLevel(int)
+    111:112:public void getLabelStruct(byte[])
+    325:335:public java.lang.String[] getScreenGridNames()
+    private static native void nativeResetLabelManager(int)
+    private static native void nativePx20ToScreen(int,int,int,com.amap.mapapi.map.be)
+    private static native void nativePxToScreen(int,int,int,com.amap.mapapi.map.be)
+    private static native void nativeScreenToPx20(int,int,int,com.amap.mapapi.map.be)
+    private static native void nativeScreenToPx(int,int,int,com.amap.mapapi.map.be)
+    private static native void nativeGetScreenGridNames(int,byte[])
+    private static native void nativeGetLabelStruct(int,byte[])
+    private static native int nativeGetMapWidth(int)
+    private static native int nativeGetMapHeight(int)
+    private static native int nativeGetMapAngle(int)
+    private static native int nativeGetMapCenterX(int)
+    private static native int nativeGetMapCenterY(int)
+    private static native int nativeGetMapLevel(int)
+    private static native void nativeSetMapLevel(int,int)
+com.mapabc.minimap.map.vmap.NativeMapEngine:
+    public static final int ICON_WIDTH
+    public static final int ICON_HEIGHT
+    public static final int MAX_ICON_SIZE
+    public static final int MAX_LABELAINE
+    123:124:public void clearBackground()
+    131:131:public byte[] getGridData(java.lang.String)
+    139:140:public void setIconData(int,byte[])
+    171:171:public int getBitmapCacheSize()
+    private static native int nativeGetBitmapCacheSize(int)
+    private static native void nativeClearBackground(int)
+    private static native byte[] nativeGetGridData(int,java.lang.String)
+    private static native void nativeSetIconData(int,int,byte[])
+com.mapabc.minimap.map.vmap.VMapProjection:
+    public static final int MAXZOOMLEVEL
+    public static final int PixelsPerTile
+    public static final double MinLatitude
+    public static final double MaxLatitude
+    public static final double MinLongitude
+    public static final double MaxLongitude
+    public static final int EarthRadiusInMeters
+    public static final int TileSplitLevel
+    public static final double EarthCircumferenceInMeters
+    21:22:public VMapProjection()
+    30:30:public static com.amap.mapapi.map.be LatLongToPixels(int,int,int)
+    56:68:public static com.amap.mapapi.map.be PixelsToPixels(long,long,int,int)
+    74:84:public static com.mapabc.minimap.map.vmap.a PixelsToLatLong(long,long,int)
+com.mapabc.minimap.map.vmap.a

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="180dip"
+    android:layout_height="180dip"
+    android:layout_gravity="center"
+    android:background="@drawable/boxbg"
+    android:padding="3dip" >
+
+    <ImageView
+        android:id="@+id/narrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/narrow" />
+
+    <ImageView
+        android:id="@+id/parking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/parking" />
+
+</RelativeLayout>

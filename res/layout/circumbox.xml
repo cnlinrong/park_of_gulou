@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/boxbg"
+    android:padding="3dip" >
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/close" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dip"
+        android:layout_marginTop="10dip"
+        android:background="#267e00"
+        android:padding="3dip"
+        android:text="周边热点"
+        android:textColor="@color/white"
+        android:textSize="20dip"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:layout_below="@id/text"
+        android:layout_marginTop="5dip"
+        android:background="@drawable/line"
+        android:padding="5dip" />
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_alignParentBottom="true" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:gravity="center_horizontal" >
+
+                <Button
+                    android:id="@+id/catering"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dip"
+                    android:background="@drawable/catering_bg" />
+
+                <Button
+                    android:id="@+id/play"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dip"
+                    android:layout_marginRight="20dip"
+                    android:background="@drawable/play_bg" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip"
+                android:gravity="center_horizontal" >
+
+                <Button
+                    android:id="@+id/shop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dip"
+                    android:background="@drawable/shop_bg" />
+
+                <Button
+                    android:id="@+id/attractions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dip"
+                    android:layout_marginRight="20dip"
+                    android:background="@drawable/attractions_bg" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip"
+                android:gravity="center_horizontal" >
+
+                <Button
+                    android:id="@+id/hotel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dip"
+                    android:background="@drawable/hotel_bg" />
+
+                <Button
+                    android:id="@+id/gas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dip"
+                    android:layout_marginRight="20dip"
+                    android:background="@drawable/gas_bg" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

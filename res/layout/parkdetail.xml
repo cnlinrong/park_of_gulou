@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dip"
+    android:layout_height="200dip"
+    android:layout_gravity="center"
+    android:background="@drawable/childbg"
+    android:padding="5dip" >
+
+    <ImageView
+        android:id="@+id/weather_quit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:padding="10dip"
+        android:src="@drawable/close" />
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="45dip"
+        android:layout_marginTop="20dip"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:src="@drawable/detial" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:text="鼓楼停车场详情"
+            android:textColor="#267e00"
+            android:textSize="15dip" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/line"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_below="@id/title"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:background="@drawable/line" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line"
+        android:orientation="vertical"
+        android:paddingLeft="25dip"
+        android:paddingRight="25dip" >
+
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dip"
+            android:paddingTop="10dip"
+            android:text="名称："
+            android:textColor="#267e00" />
+
+        <TextView
+            android:id="@+id/parkIv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dip"
+            android:paddingTop="10dip"
+            android:text="车位（空/总）："
+            android:textColor="#267e00" />
+
+        <TextView
+            android:id="@+id/costIv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dip"
+            android:paddingTop="10dip"
+            android:text="收费标准："
+            android:textColor="#267e00" />
+
+        <TextView
+            android:id="@+id/distanceIv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dip"
+            android:paddingTop="10dip"
+            android:text="距离："
+            android:textColor="#267e00" />
+
+        <TextView
+            android:id="@+id/addressIv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dip"
+            android:paddingTop="10dip"
+            android:text="地址："
+            android:textColor="#267e00" />
+
+        <TextView
+            android:id="@+id/markIv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dip"
+            android:paddingTop="10dip"
+            android:text="备注："
+            android:textColor="#267e00" />
+    </LinearLayout>
+
+</RelativeLayout>

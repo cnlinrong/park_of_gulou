@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:minHeight="50dip" >
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dip"
+        android:textColor="#277d01"
+        android:textSize="18dip"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/roadText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/titleText"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="3dip"
+        android:textColor="@color/black2"
+        android:textSize="13dip"
+        android:textStyle="bold" />
+
+</RelativeLayout>

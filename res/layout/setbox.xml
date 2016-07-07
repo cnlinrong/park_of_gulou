@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dip"
+    android:layout_height="350dip"
+    android:layout_gravity="center"
+    android:background="@drawable/near_box"
+    android:padding="3dip" >
+
+    <TextView
+        android:id="@+id/top"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_alignParentTop="true" />
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dip"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="10dip"
+            android:layout_weight="1"
+            android:background="@drawable/ok_bg"
+            android:text="确定" />
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="20dip"
+            android:layout_weight="1"
+            android:background="@drawable/ok_bg"
+            android:text="取消" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottom"
+        android:layout_below="@id/top"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="20dip"
+                    android:text="查询周边停车场范围"
+                    android:textColor="@color/yellow"
+                    android:textSize="20dip"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginTop="7dip"
+                    android:background="@drawable/titlebg" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dip" >
+
+                    <RadioButton
+                        android:id="@+id/radio01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/radiobutton_bg"
+                        android:text="200米以内" >
+                    </RadioButton>
+
+                    <RadioButton
+                        android:id="@+id/radio02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/radiobutton_bg"
+                        android:checked="true"
+                        android:text="500米以内" >
+                    </RadioButton>
+
+                    <RadioButton
+                        android:id="@+id/radio03"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/radiobutton_bg"
+                        android:text="1000米以内" >
+                    </RadioButton>
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="20dip"
+                    android:text="查询周边热点范围"
+                    android:textColor="@color/yellow"
+                    android:textSize="20dip"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginTop="7dip"
+                    android:background="@drawable/titlebg" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dip" >
+
+                    <RadioButton
+                        android:id="@+id/radio021"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/radiobutton_bg"
+                        android:text="1000米以内" >
+                    </RadioButton>
+
+                    <RadioButton
+                        android:id="@+id/radio022"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/radiobutton_bg"
+                        android:text="2000米以内" >
+                    </RadioButton>
+
+                    <RadioButton
+                        android:id="@+id/radio023"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/radiobutton_bg"
+                        android:checked="true"
+                        android:text="3000米以内" >
+                    </RadioButton>
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="20dip"
+                    android:text="客户端运行首界面设置"
+                    android:textColor="@color/yellow"
+                    android:textSize="20dip"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginTop="7dip"
+                    android:background="@drawable/titlebg" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dip" >
+
+                    <RadioButton
+                        android:id="@+id/radio04"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/radiobutton_bg"
+                        android:text="停车场自动搜索" >
+                    </RadioButton>
+
+                    <RadioButton
+                        android:id="@+id/radio05"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/radiobutton_bg"
+                        android:checked="true"
+                        android:text="一键停车" >
+                    </RadioButton>
+
+                    <RadioButton
+                        android:id="@+id/radio06"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/radiobutton_bg"
+                        android:text="语音停车" >
+                    </RadioButton>
+                </RadioGroup>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

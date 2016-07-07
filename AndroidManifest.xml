@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.funo.park"
+    android:versionCode="1"
+    android:versionName="1.2" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- <uses-permission android:name="android.permission.FORCE_STOP_PACKAGES"/> -->
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <application
+        android:name="com.funo.park.MyApplication"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar" >
+        <!-- 移动统计分析 -->
+        <meta-data
+            android:name="IFLYTEK_APPKEY"
+            android:value="&apos;5775d092&apos;" />
+        <meta-data
+            android:name="IFLYTEK_CHANNEL"
+            android:value="Android_Demo" />
+        
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="388bb503ec32b90382e2bf617ca48b00" />
+
+        <activity
+            android:name=".LoadingActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GridActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".bicycle.PublicBicycleActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".bicycle.PublicBicycleHelpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".bicycle.PublicBicycleRoadLineActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".bicycle.PublicBicycleCollectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".update.UpdateManulActivity"
+            android:theme="@style/Theme.DialogActivity" />
+        <activity
+            android:name=".update.UpdatePrompt"
+            android:theme="@style/Theme.DialogActivity" />
+
+        <service android:name=".update.UpdateService" />
+        <!-- 定位需要的服务 使用2.0的定位需要加上这个 -->
+        <service android:name="com.amap.api.location.APSService" />
+    </application>
+
+</manifest>

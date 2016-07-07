@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World!</string>
+    <!-- <string name="app_name">数字鼓楼智能交通</string> -->
+    <string name="app_name">鼓楼出行通</string>
+    <string name="maps_api_key">c2b0f58a6f09cafd1503c06ef08ac7aeb7ddb91a03813e52fa21c971e1ec1798097fd923562372d3</string>
+    <string name="preference_key_iat_engine">iat_engine</string>
+    <string name="preference_default_iat_engine">sms</string>
+    <string name="preference_default_poi_province">全选</string>
+    <string name="preference_key_poi_province">poi_province</string>
+    <string name="preference_default_poi_city">全选</string>
+    <string name="preference_key_poi_city">poi_city</string>
+    <string name="preference_key_iat_rate">iat_rate</string>
+    <string name="preference_default_iat_rate">rate16k</string>
+    <string name="update_notification">update_notification</string>
+    <string name="update_notification_title">更新提示</string>
+    <string name="alert_dialog_ok">确定</string>
+    <string name="alert_dialog_cancel">取消</string>
+    <string name="no_result">对不起，没有搜索到相关数据！</string>
+
+</resources>

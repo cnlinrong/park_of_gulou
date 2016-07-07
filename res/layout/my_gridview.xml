@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/mytitlebg" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="鼓楼智能交通出行服务"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="19dp"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/top" >
+
+        <GridView
+            android:id="@+id/gridview_id"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:horizontalSpacing="15dip"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="2"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:stretchMode="columnWidth" />
+    </RelativeLayout>
+
+</RelativeLayout>

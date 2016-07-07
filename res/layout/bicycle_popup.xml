@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dip"
+    android:layout_height="80dip"
+    android:background="@drawable/bicycle_pop_bg"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="149dip"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:padding="5dip" >
+
+        <TextView
+            android:id="@+id/bicycle_popup_title"
+            android:layout_width="149dip"
+            android:layout_height="wrap_content"
+            android:text="东街口站"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/bicycle_popup_num"
+            android:layout_width="149dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/bicycle_popup_addr"
+            android:layout_width="149dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:text="天泉路天元花园"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="1dip"
+        android:layout_height="fill_parent"
+        android:background="@drawable/bicycle_vertical_line" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/bicycle_popup_pic_l"
+            android:layout_width="40dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/bicycle_popup_collectsmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/selector_collectsmall_btn" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/bicycle_horizontal_line" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/bicycle_popup_roadline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/selector_roadline_btn" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

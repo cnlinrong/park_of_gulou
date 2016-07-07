@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/park_list_item"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="45dip" >
+
+    <LinearLayout
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dip"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dip"
+            android:text="名称："
+            android:textColor="@color/yellow"
+            android:textSize="15dip" />
+
+        <TextView
+            android:id="@+id/parkIv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dip"
+            android:paddingTop="5dip"
+            android:text="车位（空/总）："
+            android:textColor="#267e00" />
+
+        <TextView
+            android:id="@+id/costIv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dip"
+            android:paddingTop="5dip"
+            android:text="收费标准："
+            android:textColor="#267e00" />
+
+        <TextView
+            android:id="@+id/addressIv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dip"
+            android:paddingTop="5dip"
+            android:text="地址："
+            android:textColor="#267e00" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="20dip" >
+
+        <ImageButton
+            android:id="@+id/naviIb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/navigation_bg" />
+    </LinearLayout>
+
+</RelativeLayout>

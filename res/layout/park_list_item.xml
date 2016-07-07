@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/park_list_item"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="45dip" >
+
+    <TextView
+        android:id="@+id/parkText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="60dip"
+        android:textColor="@color/blacktext"
+        android:textSize="18dip"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/parkIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dip"
+        android:background="@drawable/park_bg" />
+
+</RelativeLayout>

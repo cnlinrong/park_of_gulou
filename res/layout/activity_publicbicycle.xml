@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <com.amap.api.maps.MapView
+            android:id="@+id/bicycle_mapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="40dip" />
+
+        <LinearLayout
+            android:id="@+id/topTools"
+            android:layout_width="fill_parent"
+            android:layout_height="56dip"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/bicycle_top_bg"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/bycycle_search_bg"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dip"
+                    android:background="@drawable/bicycle_sreach" />
+
+                <EditText
+                    android:id="@+id/publicbicycle_search_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dip"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:hint="请输入您要查询的站点名称"
+                    android:singleLine="true"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/publicbicycle_search_btn"
+                    android:layout_width="60dip"
+                    android:layout_height="40dip"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/selector_search_btn"
+                    android:gravity="center"
+                    android:text="搜  索"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/publicbicycle_lv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/topTools"
+            android:layout_marginBottom="40dip"
+            android:cacheColorHint="#00000000"
+            android:divider="@drawable/bicycle_divider_line"
+            android:fadingEdge="none"
+            android:listSelector="#00000000"
+            android:visibility="gone" >
+        </ListView>
+
+        <RelativeLayout
+            android:id="@+id/publicbicycle_float_tool"
+            android:layout_width="120dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/topTools"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/bicycle_black_bg"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/publicbicycle_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_location_btn" />
+
+            <ImageView
+                android:id="@+id/publicbicycle_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/selector_bicyclelist_btn" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/bottomTools"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="-40dip"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@drawable/bicycle_bottom_bg"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/publicbicycle_collect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dip"
+                    android:background="@drawable/selector_collect_btn" />
+
+                <ImageView
+                    android:id="@+id/publicbicycle_help"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dip"
+                    android:background="@drawable/selector_help_btn" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/publicbicycle_map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/selector_map_btn" />
+        </FrameLayout>
+    </RelativeLayout>
+
+</LinearLayout>
